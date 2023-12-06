@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CL_Controlador;
+
 
 namespace ProyectoJohanChavez
 {
@@ -29,6 +31,20 @@ namespace ProyectoJohanChavez
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+            labelIBC.Text = CL_Controlador.CalcularSueldo.CalcularIbc(int.Parse(txtSueldo.Text), int.Parse(txtHorasExtra.Text))+"";
+
+            labelSueldo.Text = txtSueldo.Text;
+            labelHorasExtra.Text = txtHorasExtra.Text;
+            labelDiasTrabajados.Text = txtDiasTrabajados.Text;
+            labelNivelRiesgoSSE.Text = cbNivelRiesgo.Text;
+            labelTipoTrabajador.Text = cbTipoTrabajador.Text;
+
             
         }
     }
