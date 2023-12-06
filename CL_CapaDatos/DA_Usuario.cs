@@ -14,5 +14,6 @@ namespace CL_CapaDatos
         public string tipoDocumento { get;set; }
         public string nombre { get; set; }
 
+
     }
 }
