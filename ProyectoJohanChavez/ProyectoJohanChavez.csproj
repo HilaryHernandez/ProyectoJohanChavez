@@ -167,5 +167,11 @@
   <ItemGroup>
     <None Include="Resources\Simple Green Yellow Super Market Logo %283%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CL_Controlador\CL_Controlador.csproj">
+      <Project>{f4aa375a-7f94-4f00-b3c1-bd829e41216d}</Project>
+      <Name>CL_Controlador</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
