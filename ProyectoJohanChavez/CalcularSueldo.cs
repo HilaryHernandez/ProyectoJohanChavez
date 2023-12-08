@@ -46,7 +46,7 @@ namespace ProyectoJohanChavez
             
             labelIBC.Text =CTCalcularSueldo.CalcularIbc(int.Parse(txtSueldo.Text), int.Parse(txtHorasExtra.Text))+"";
 
-            labelSueldo.Text = txtSueldo.Text;
+            labelSueldo.Text = CTCalcularSueldo.calcularSueldoConHorasExtras(int.Parse(txtSueldo.Text),int.Parse(txtHorasExtra.Text));
             labelHorasExtra.Text = txtHorasExtra.Text;
             labelDiasTrabajados.Text = txtDiasTrabajados.Text;
             labelNivelRiesgoSSE.Text = cbNivelRiesgo.Text;
@@ -54,17 +54,34 @@ namespace ProyectoJohanChavez
             labelPensionSSE.Text = CTCalcularSueldo.CalcularPension(int.Parse(labelIBC.Text))+"";
             labelArlSSE.Text = CTCalcularSueldo.CalcularArl(double.Parse(labelIBC.Text),labelNivelRiesgoSSE.Text);
             labelEpsSSE.Text =CTCalcularSueldo.CalcularEps(int.Parse(labelIBC.Text));
+
             if (labelTipoTrabajador.Text.Equals("INDEPENDIENTE"))
             {
                 labelCajaCompensacionAP.Text = "0";
                 labelIcbfAP.Text = "0";
                 labelSenaAP.Text= "0";
+
             }
-            else
-            {
+            else 
+            {            
+                //Seguridad social Empresa
+                labelPensionSSE.Text = CTCalcularSueldo.CalcularPension(int.Parse(labelIBC.Text)) + "";
+                labelArlSSE.Text = CTCalcularSueldo.CalcularArl(double.Parse(labelIBC.Text), labelNivelRiesgoSSE.Text);
+                labelEpsSSE.Text = CTCalcularSueldo.CalcularEps(int.Parse(labelIBC.Text));
+                //Aportes parafiscales 
                 labelCajaCompensacionAP.Text = CTCalcularSueldo.CalcularCajaCompensacion(int.Parse(labelSueldo.Text));
-                labelIcbfAP.Text = CTCalcularSueldo.CalcularICBF(int.Parse(labelSueldo.Text)); ;
-                labelSenaAP.Text = CTCalcularSueldo.CalcularSENA(int.Parse(labelSueldo.Text)); ;
+                labelIcbfAP.Text = CTCalcularSueldo.CalcularICBF(int.Parse(labelSueldo.Text)); 
+                labelSenaAP.Text = CTCalcularSueldo.CalcularSENA(int.Parse(labelSueldo.Text));
+                //Prestaciones sociales
+                labelCesantiasPS.Text = CTCalcularSueldo.calcularCesantias(int.Parse(labelSueldo.Text),int.Parse(labelDiasTrabajados.Text));
+                labelVacacionesPS.Text = CTCalcularSueldo.calcularVacaciones(int.Parse(labelSueldo.Text), int.Parse(labelDiasTrabajados.Text));
+                labelInteresCesantiasPS.Text = CTCalcularSueldo.calcularInteresesCesantias(int.Parse(labelCesantiasPS.Text), int.Parse(labelDiasTrabajados.Text));
+                labelPensionSST.Text =CTCalcularSueldo.CalcularPensionEmpleado(int.Parse(labelSueldo.Text));
+                labelEpsSST.Text =CTCalcularSueldo.CalcularEpsEmpleado(int.Parse(labelSueldo.Text));
+                //prima y liquidacion
+                labelPrima.Text = CTCalcularSueldo.CalcularPrima(int.Parse(labelSueldo.Text), int.Parse(labelDiasTrabajados.Text));
+                labelLiquidacion.Text= CTCalcularSueldo.CalcularLiquidacion(int.Parse(labelSueldo.Text), int.Parse(labelDiasTrabajados.Text));
+                labelSueldoTotal.Text = (int.Parse(labelSueldo.Text) - (int.Parse(labelPensionSST.Text) + int.Parse(labelEpsSST.Text))).ToString();
             }
         }
 
