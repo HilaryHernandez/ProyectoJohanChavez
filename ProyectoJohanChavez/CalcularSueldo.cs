@@ -19,6 +19,12 @@ namespace ProyectoJohanChavez
             InitializeComponent();
         }
 
+        public ComboBox cb
+        {
+            get { return cbTipoTrabajador; }
+            set { cbTipoTrabajador=value;}
+        }
+
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -34,18 +40,37 @@ namespace ProyectoJohanChavez
             
         }
 
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             
-            labelIBC.Text = CL_Controlador.CalcularSueldo.CalcularIbc(int.Parse(txtSueldo.Text), int.Parse(txtHorasExtra.Text))+"";
+            labelIBC.Text =CTCalcularSueldo.CalcularIbc(int.Parse(txtSueldo.Text), int.Parse(txtHorasExtra.Text))+"";
 
             labelSueldo.Text = txtSueldo.Text;
             labelHorasExtra.Text = txtHorasExtra.Text;
             labelDiasTrabajados.Text = txtDiasTrabajados.Text;
             labelNivelRiesgoSSE.Text = cbNivelRiesgo.Text;
             labelTipoTrabajador.Text = cbTipoTrabajador.Text;
+            labelPensionSSE.Text = CTCalcularSueldo.CalcularPension(int.Parse(labelIBC.Text))+"";
+            labelArlSSE.Text = CTCalcularSueldo.CalcularArl(double.Parse(labelIBC.Text),labelNivelRiesgoSSE.Text);
+            labelEpsSSE.Text =CTCalcularSueldo.CalcularEps(int.Parse(labelIBC.Text));
+            if (labelTipoTrabajador.Text.Equals("INDEPENDIENTE"))
+            {
+                labelCajaCompensacionAP.Text = "0";
+                labelIcbfAP.Text = "0";
+                labelSenaAP.Text= "0";
+            }
+            else
+            {
+                labelCajaCompensacionAP.Text = CTCalcularSueldo.CalcularCajaCompensacion(int.Parse(labelSueldo.Text));
+                labelIcbfAP.Text = CTCalcularSueldo.CalcularICBF(int.Parse(labelSueldo.Text)); ;
+                labelSenaAP.Text = CTCalcularSueldo.CalcularSENA(int.Parse(labelSueldo.Text)); ;
+            }
+        }
 
-            
+        private void groupCalcular_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

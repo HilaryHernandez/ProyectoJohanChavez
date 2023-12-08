@@ -170,10 +170,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(800, 531);
-            this.Controls.Add(this.groupInicioSesion);
             this.Controls.Add(this.menuEmpleado);
             this.Controls.Add(this.menuAdmin);
             this.Controls.Add(this.menuUser);
+            this.Controls.Add(this.groupInicioSesion);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Name = "Form1";
             this.Text = "Form1";

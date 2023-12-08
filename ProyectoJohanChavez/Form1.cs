@@ -47,6 +47,7 @@ namespace ProyectoJohanChavez
             CalcularSueldo from = new CalcularSueldo();
             from.MdiParent = this;
 
+            from.cb.SelectedIndex = 0;
             from.Show();
             from.WindowState = FormWindowState.Maximized;
         }
