@@ -105,6 +105,7 @@
             this.buttonIngresar.TabIndex = 51;
             this.buttonIngresar.Text = "INGRESAR";
             this.buttonIngresar.UseVisualStyleBackColor = false;
+            this.buttonIngresar.Click += new System.EventHandler(this.buttonIngresar_Click_1);
             // 
             // buttonOmitir
             // 

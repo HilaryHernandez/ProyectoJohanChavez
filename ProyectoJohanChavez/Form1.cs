@@ -21,7 +21,7 @@ namespace ProyectoJohanChavez
             InitializeComponent();
 
             IsMdiContainer = true;
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace ProyectoJohanChavez
 
         public static String CadenaConexion = "Server=localhost; DATABASE=trabajadores; UID=root; PASSWORD=";
         MySqlConnection conexion = new MySqlConnection(CadenaConexion);
-        private void buttonIngresar_Click(object sender, EventArgs e)
+        private void buttonIngresar_Click_1(object sender, EventArgs e)
         {
             conexion.Open();
             string validacion = "select * from usuario WHERE noDocumento='" + IdentificaciónInicioSesion.Text + "' and contraseña='" + ContraseñaInicioSesion.Text + "'";
@@ -85,7 +85,7 @@ namespace ProyectoJohanChavez
             {
                 MessageBox.Show("Los campos deben estar llenos");
             }
-            else if (lector.HasRows==true) 
+            else if (lector.HasRows == true)
             {
                 menu menu = new menu();
                 this.Hide();
@@ -98,5 +98,7 @@ namespace ProyectoJohanChavez
             }
             conexion.Close();
         }
+
+
     }
 }
