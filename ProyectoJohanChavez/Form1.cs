@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using MySqlConnector;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace ProyectoJohanChavez
 {
@@ -61,6 +65,38 @@ namespace ProyectoJohanChavez
         {
             menuUser.Visible = true;
             groupInicioSesion.Visible = false;
+        }
+
+        private void groupInicioSesion_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        public static String CadenaConexion = "Server=localhost; DATABASE=trabajadores; UID=root; PASSWORD=";
+        MySqlConnection conexion = new MySqlConnection(CadenaConexion);
+        private void buttonIngresar_Click(object sender, EventArgs e)
+        {
+            conexion.Open();
+            string validacion = "select * from usuario WHERE noDocumento='" + IdentificaciónInicioSesion.Text + "' and contraseña='" + ContraseñaInicioSesion.Text + "'";
+            MySqlCommand comando = new MySqlCommand(validacion, conexion);
+            MySqlDataReader lector = comando.ExecuteReader();
+
+            if (IdentificaciónInicioSesion.Text == string.Empty || ContraseñaInicioSesion.Text == string.Empty)
+            {
+                MessageBox.Show("Los campos deben estar llenos");
+            }
+            else if (lector.HasRows==true) 
+            {
+                menu menu = new menu();
+                this.Hide();
+                menu.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("DOCUMENTO O CONTRRASEÑA INCORRECTOS");
+            }
+            conexion.Close();
         }
     }
 }
