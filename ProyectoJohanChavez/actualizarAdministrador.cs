@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProyectoJohanChavez
 {
-    public partial class menu : Form
+    public partial class actualizarAdministrador : Form
     {
-        public menu()
+        public actualizarAdministrador()
         {
             InitializeComponent();
+        }
+
+        private void actualizarAdministrador_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

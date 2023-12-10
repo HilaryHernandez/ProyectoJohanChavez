@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoJohanChavez
 {
-    public partial class menu : Form
+    public partial class modificarDatos : Form
     {
-        public menu()
+        public modificarDatos()
         {
             InitializeComponent();
         }

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProyectoJohanChavez
 {
-    public partial class menu : Form
+    public partial class PanelUsuario : Form
     {
-        public menu()
+        public PanelUsuario()
         {
             InitializeComponent();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
