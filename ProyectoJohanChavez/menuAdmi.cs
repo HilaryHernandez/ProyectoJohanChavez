@@ -16,5 +16,10 @@ namespace ProyectoJohanChavez
         {
             InitializeComponent();
         }
+
+        private void menuAdmi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

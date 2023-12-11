@@ -279,7 +279,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoJohanChavez.Properties.Resources.mujeres_la_jungla___social_428219275_134300545_1706x960;
             this.pictureBox1.Location = new System.Drawing.Point(560, 76);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(126, 132);

@@ -122,7 +122,6 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::ProyectoJohanChavez.Properties.Resources.captcha;
             this.pictureBox5.Location = new System.Drawing.Point(480, 324);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(64, 68);
@@ -131,7 +130,6 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::ProyectoJohanChavez.Properties.Resources.reclutamiento;
             this.pictureBox4.Location = new System.Drawing.Point(592, 126);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 71);
@@ -140,7 +138,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::ProyectoJohanChavez.Properties.Resources.rebautizar;
             this.pictureBox3.Location = new System.Drawing.Point(236, 324);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(64, 63);
@@ -158,7 +155,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoJohanChavez.Properties.Resources.seguidores;
             this.pictureBox1.Location = new System.Drawing.Point(363, 126);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 71);
@@ -184,6 +180,7 @@
             this.Controls.Add(this.buttonCalcularSueldo);
             this.Name = "menuAdmi";
             this.Text = "menuAdmi";
+            this.Load += new System.EventHandler(this.menuAdmi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

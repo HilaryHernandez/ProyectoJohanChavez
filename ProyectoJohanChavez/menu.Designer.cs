@@ -60,6 +60,7 @@
             this.buttonPanelUsuario.TabIndex = 1;
             this.buttonPanelUsuario.Text = "PANEL DE USUARIO";
             this.buttonPanelUsuario.UseVisualStyleBackColor = false;
+            this.buttonPanelUsuario.Click += new System.EventHandler(this.buttonPanelUsuario_Click);
             // 
             // label1
             // 

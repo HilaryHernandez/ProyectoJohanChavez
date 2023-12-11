@@ -33,8 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.0.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.0.0\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlConnector.2.3.1\lib\net471\MySqlConnector.dll</HintPath>
@@ -44,8 +56,8 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
@@ -70,8 +82,21 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="actualizarAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarAdministrador.Designer.cs">
+      <DependentUpon>actualizarAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actualizarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actualizarUsuario.Designer.cs">
+      <DependentUpon>actualizarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="CalcularSueldo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,14 +115,44 @@
     <Compile Include="menu.Designer.cs">
       <DependentUpon>menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="menuAdmi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuAdmi.Designer.cs">
+      <DependentUpon>menuAdmi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modificarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modificarDatos.Designer.cs">
+      <DependentUpon>modificarDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelUsuario.Designer.cs">
+      <DependentUpon>PanelUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrarUsuario.Designer.cs">
+      <DependentUpon>registrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResultadosCalculoSueldo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ResultadosCalculoSueldo.Designer.cs">
       <DependentUpon>ResultadosCalculoSueldo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="actualizarAdministrador.resx">
+      <DependentUpon>actualizarAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actualizarUsuario.resx">
+      <DependentUpon>actualizarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalcularSueldo.resx">
       <DependentUpon>CalcularSueldo.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +161,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuAdmi.resx">
+      <DependentUpon>menuAdmi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modificarDatos.resx">
+      <DependentUpon>modificarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelUsuario.resx">
+      <DependentUpon>PanelUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +181,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="registrarUsuario.resx">
+      <DependentUpon>registrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResultadosCalculoSueldo.resx">
       <DependentUpon>ResultadosCalculoSueldo.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,10 +262,18 @@
     <None Include="Resources\Simple Green Yellow Super Market Logo %283%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CE_CapaEntidades\CE_CapaEntidades.csproj">
+      <Project>{17ff4955-b125-4346-aebb-107b3cf2bea9}</Project>
+      <Name>CE_CapaEntidades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CL_Controlador\CL_Controlador.csproj">
       <Project>{f4aa375a-7f94-4f00-b3c1-bd829e41216d}</Project>
       <Name>CL_Controlador</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Nullimage.png" />
+    <Content Include="Resources\peinados-para-frentonas-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -37,7 +37,7 @@
             this.buttonOmitir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ContraseñaInicioSesion = new System.Windows.Forms.TextBox();
-            this.IdentificaciónInicioSesion = new System.Windows.Forms.TextBox();
+            IdentificaciónInicioSesion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.menuUser.SuspendLayout();
@@ -84,7 +84,7 @@
             this.groupInicioSesion.Controls.Add(this.buttonOmitir);
             this.groupInicioSesion.Controls.Add(this.pictureBox1);
             this.groupInicioSesion.Controls.Add(this.ContraseñaInicioSesion);
-            this.groupInicioSesion.Controls.Add(this.IdentificaciónInicioSesion);
+            this.groupInicioSesion.Controls.Add(IdentificaciónInicioSesion);
             this.groupInicioSesion.Controls.Add(this.label4);
             this.groupInicioSesion.Controls.Add(this.label3);
             this.groupInicioSesion.Location = new System.Drawing.Point(4, 6);
@@ -93,6 +93,7 @@
             this.groupInicioSesion.TabIndex = 3;
             this.groupInicioSesion.TabStop = false;
             this.groupInicioSesion.Text = "Inicio de sesion";
+            this.groupInicioSesion.Enter += new System.EventHandler(this.groupInicioSesion_Enter_1);
             // 
             // buttonIngresar
             // 
@@ -139,11 +140,11 @@
             // 
             // IdentificaciónInicioSesion
             // 
-            this.IdentificaciónInicioSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.IdentificaciónInicioSesion.Location = new System.Drawing.Point(289, 204);
-            this.IdentificaciónInicioSesion.Name = "IdentificaciónInicioSesion";
-            this.IdentificaciónInicioSesion.Size = new System.Drawing.Size(210, 20);
-            this.IdentificaciónInicioSesion.TabIndex = 47;
+            IdentificaciónInicioSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            IdentificaciónInicioSesion.Location = new System.Drawing.Point(289, 204);
+            IdentificaciónInicioSesion.Name = "IdentificaciónInicioSesion";
+            IdentificaciónInicioSesion.Size = new System.Drawing.Size(210, 20);
+            IdentificaciónInicioSesion.TabIndex = 47;
             // 
             // label4
             // 
@@ -200,7 +201,7 @@
         private System.Windows.Forms.Button buttonOmitir;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox ContraseñaInicioSesion;
-        private System.Windows.Forms.TextBox IdentificaciónInicioSesion;
+        public  System.Windows.Forms.TextBox IdentificaciónInicioSesion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
     }

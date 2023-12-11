@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CL_CapaDatos", "CL_CapaDato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CL_Controlador", "CL_Controlador\CL_Controlador.csproj", "{F4AA375A-7F94-4F00-B3C1-BD829E41216D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CE_CapaEntidades", "CE_CapaEntidades\CE_CapaEntidades.csproj", "{17FF4955-B125-4346-AEBB-107B3CF2BEA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F4AA375A-7F94-4F00-B3C1-BD829E41216D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4AA375A-7F94-4F00-B3C1-BD829E41216D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4AA375A-7F94-4F00-B3C1-BD829E41216D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17FF4955-B125-4346-AEBB-107B3CF2BEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17FF4955-B125-4346-AEBB-107B3CF2BEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17FF4955-B125-4346-AEBB-107B3CF2BEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17FF4955-B125-4346-AEBB-107B3CF2BEA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

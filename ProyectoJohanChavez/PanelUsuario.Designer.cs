@@ -52,6 +52,8 @@
             this.buttonImplementosP = new System.Windows.Forms.Button();
             this.buttonActualizarU = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMostrarFoto = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -273,6 +275,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(269, 214);
             this.dataGridView1.TabIndex = 68;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // buttonRiesgos
             // 
@@ -285,6 +288,7 @@
             this.buttonRiesgos.TabIndex = 71;
             this.buttonRiesgos.Text = "RIESGOS";
             this.buttonRiesgos.UseVisualStyleBackColor = false;
+            this.buttonRiesgos.Click += new System.EventHandler(this.buttonRiesgos_Click);
             // 
             // buttonImplementosP
             // 
@@ -312,13 +316,34 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoJohanChavez.Properties.Resources.mujeres_la_jungla___social_428219275_134300545_1706x960;
+            this.pictureBox1.Image = global::ProyectoJohanChavez.Properties.Resources.panel_de_administrador;
             this.pictureBox1.Location = new System.Drawing.Point(552, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(126, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnMostrarFoto
+            // 
+            this.btnMostrarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMostrarFoto.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarFoto.ForeColor = System.Drawing.Color.Azure;
+            this.btnMostrarFoto.Location = new System.Drawing.Point(684, 112);
+            this.btnMostrarFoto.Name = "btnMostrarFoto";
+            this.btnMostrarFoto.Size = new System.Drawing.Size(110, 45);
+            this.btnMostrarFoto.TabIndex = 74;
+            this.btnMostrarFoto.Text = "MOSTRAR FOTO";
+            this.btnMostrarFoto.UseVisualStyleBackColor = false;
+            this.btnMostrarFoto.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(352, 135);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 75;
             // 
             // PanelUsuario
             // 
@@ -326,6 +351,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(800, 531);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnMostrarFoto);
             this.Controls.Add(this.buttonActualizarU);
             this.Controls.Add(this.buttonImplementosP);
             this.Controls.Add(this.buttonRiesgos);
@@ -354,6 +381,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "PanelUsuario";
             this.Text = "PanelUsuario";
+            this.Load += new System.EventHandler(this.PanelUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -382,10 +410,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonRiesgos;
         private System.Windows.Forms.Button buttonImplementosP;
         private System.Windows.Forms.Button buttonActualizarU;
+        private System.Windows.Forms.Button btnMostrarFoto;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F4AA375A-7F94-4F00-B3C1-BD829E41216D}</ProjectGuid>
+    <ProjectGuid>{17FF4955-B125-4346-AEBB-107B3CF2BEA9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CL_Controlador</RootNamespace>
-    <AssemblyName>CL_Controlador</AssemblyName>
+    <RootNamespace>CE_CapaEntidades</RootNamespace>
+    <AssemblyName>CE_CapaEntidades</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,8 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CTCalcularSueldo.cs" />
-    <Compile Include="CT_Usuario.cs" />
+    <Compile Include="CE_Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -71,16 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CE_CapaEntidades\CE_CapaEntidades.csproj">
-      <Project>{17ff4955-b125-4346-aebb-107b3cf2bea9}</Project>
-      <Name>CE_CapaEntidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CL_CapaDatos\CL_CapaDatos.csproj">
-      <Project>{2314e544-88d2-4791-a421-0e8cee472e29}</Project>
-      <Name>CL_CapaDatos</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

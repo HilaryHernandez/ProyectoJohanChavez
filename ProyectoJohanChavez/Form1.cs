@@ -4,12 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using MySqlConnector;
+using static ProyectoJohanChavez.PanelUsuario;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace ProyectoJohanChavez
@@ -22,6 +24,7 @@ namespace ProyectoJohanChavez
 
             IsMdiContainer = true;
 
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -72,12 +75,22 @@ namespace ProyectoJohanChavez
 
         }
 
+
+
         public static String CadenaConexion = "Server=localhost; DATABASE=trabajadores; UID=root; PASSWORD=";
-        MySqlConnection conexion = new MySqlConnection(CadenaConexion);
+        public MySqlConnection conexion = new MySqlConnection(CadenaConexion);
+        public string documento;
+        
+
         private void buttonIngresar_Click_1(object sender, EventArgs e)
         {
+
             conexion.Open();
             string validacion = "select * from usuario WHERE noDocumento='" + IdentificaciónInicioSesion.Text + "' and contraseña='" + ContraseñaInicioSesion.Text + "'";
+
+            
+
+
             MySqlCommand comando = new MySqlCommand(validacion, conexion);
             MySqlDataReader lector = comando.ExecuteReader();
 
@@ -90,15 +103,23 @@ namespace ProyectoJohanChavez
                 menu menu = new menu();
                 this.Hide();
                 menu.Show();
+                
 
             }
             else
             {
                 MessageBox.Show("DOCUMENTO O CONTRRASEÑA INCORRECTOS");
             }
+            
             conexion.Close();
+            
         }
 
+        
 
+        private void groupInicioSesion_Enter_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
