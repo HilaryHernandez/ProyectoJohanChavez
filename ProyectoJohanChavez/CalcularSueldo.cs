@@ -60,7 +60,14 @@ namespace ProyectoJohanChavez
                 labelCajaCompensacionAP.Text = "0";
                 labelIcbfAP.Text = "0";
                 labelSenaAP.Text= "0";
-
+                labelCesantiasPS.Text = "0";
+                labelVacacionesPS.Text = "0";
+                labelInteresCesantiasPS.Text = "0";
+                labelPensionSST.Text = CTCalcularSueldo.CalcularPensionIndependiente(int.Parse(labelSueldo.Text));
+                labelEpsSST.Text = CTCalcularSueldo.CalcularEpsIndependiente(int.Parse(labelSueldo.Text));
+                labelPrima.Text = "0";
+                labelLiquidacion.Text = "0";
+                labelSueldoTotal.Text = (int.Parse(labelSueldo.Text) - (int.Parse(labelPensionSST.Text) + int.Parse(labelEpsSST.Text))).ToString();
             }
             else 
             {            
