@@ -32,7 +32,7 @@ namespace ProyectoJohanChavez
 
         private void CalcularSueldo_Load(object sender, EventArgs e)
         {
-
+            CTCalcularSueldo.datos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -69,8 +69,8 @@ namespace ProyectoJohanChavez
                 labelLiquidacion.Text = "0";
                 labelSueldoTotal.Text = (int.Parse(labelSueldo.Text) - (int.Parse(labelPensionSST.Text) + int.Parse(labelEpsSST.Text))).ToString();
             }
-            else 
-            {            
+            else if (labelTipoTrabajador.Text.Equals("EMPLEADO"))
+                {            
                 //Seguridad social Empresa
                 labelPensionSSE.Text = CTCalcularSueldo.CalcularPension(int.Parse(labelIBC.Text)) + "";
                 labelArlSSE.Text = CTCalcularSueldo.CalcularArl(double.Parse(labelIBC.Text), labelNivelRiesgoSSE.Text);
@@ -95,6 +95,12 @@ namespace ProyectoJohanChavez
         private void groupCalcular_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void CalcularSueldo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menuAdmi admin = new menuAdmi();
+            admin.Show();
         }
     }
 }

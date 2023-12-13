@@ -60,7 +60,8 @@
             this.buttonRegistrarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonRegistrarUsuario.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegistrarUsuario.ForeColor = System.Drawing.Color.Azure;
-            this.buttonRegistrarUsuario.Location = new System.Drawing.Point(317, 203);
+            this.buttonRegistrarUsuario.Location = new System.Drawing.Point(423, 250);
+            this.buttonRegistrarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRegistrarUsuario.Name = "buttonRegistrarUsuario";
             this.buttonRegistrarUsuario.Size = new System.Drawing.Size(151, 55);
             this.buttonRegistrarUsuario.TabIndex = 6;
@@ -74,7 +75,8 @@
             this.buttonCalcularSueldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonCalcularSueldo.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCalcularSueldo.ForeColor = System.Drawing.Color.Azure;
-            this.buttonCalcularSueldo.Location = new System.Drawing.Point(88, 203);
+            this.buttonCalcularSueldo.Location = new System.Drawing.Point(117, 250);
+            this.buttonCalcularSueldo.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCalcularSueldo.Name = "buttonCalcularSueldo";
             this.buttonCalcularSueldo.Size = new System.Drawing.Size(137, 55);
             this.buttonCalcularSueldo.TabIndex = 5;
@@ -88,19 +90,22 @@
             this.buttonActualizarDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonActualizarDatos.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonActualizarDatos.ForeColor = System.Drawing.Color.Azure;
-            this.buttonActualizarDatos.Location = new System.Drawing.Point(307, 377);
+            this.buttonActualizarDatos.Location = new System.Drawing.Point(409, 464);
+            this.buttonActualizarDatos.Margin = new System.Windows.Forms.Padding(4);
             this.buttonActualizarDatos.Name = "buttonActualizarDatos";
             this.buttonActualizarDatos.Size = new System.Drawing.Size(178, 65);
             this.buttonActualizarDatos.TabIndex = 10;
             this.buttonActualizarDatos.Text = "ACTUALIZAR DATOS PARA CALCULAR SUELDO";
             this.buttonActualizarDatos.UseVisualStyleBackColor = false;
+            this.buttonActualizarDatos.Click += new System.EventHandler(this.buttonActualizarDatos_Click);
             // 
             // buttonConsultarUsuario
             // 
             this.buttonConsultarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonConsultarUsuario.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultarUsuario.ForeColor = System.Drawing.Color.Azure;
-            this.buttonConsultarUsuario.Location = new System.Drawing.Point(548, 203);
+            this.buttonConsultarUsuario.Location = new System.Drawing.Point(731, 250);
+            this.buttonConsultarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.buttonConsultarUsuario.Name = "buttonConsultarUsuario";
             this.buttonConsultarUsuario.Size = new System.Drawing.Size(151, 55);
             this.buttonConsultarUsuario.TabIndex = 14;
@@ -109,7 +114,9 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(363, 303);
+            this.pictureBox5.Image = global::ProyectoJohanChavez.Properties.Resources.actualizar_pagina;
+            this.pictureBox5.Location = new System.Drawing.Point(484, 373);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(64, 68);
             this.pictureBox5.TabIndex = 17;
@@ -117,7 +124,9 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(592, 126);
+            this.pictureBox4.Image = global::ProyectoJohanChavez.Properties.Resources.consulta;
+            this.pictureBox4.Location = new System.Drawing.Point(789, 155);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 71);
             this.pictureBox4.TabIndex = 15;
@@ -134,7 +143,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(363, 126);
+            this.pictureBox1.Image = global::ProyectoJohanChavez.Properties.Resources.registroUsuario;
+            this.pictureBox1.Location = new System.Drawing.Point(484, 155);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 71);
             this.pictureBox1.TabIndex = 7;
@@ -155,8 +166,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonRegistrarUsuario);
             this.Controls.Add(this.buttonCalcularSueldo);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "menuAdmi";
             this.Text = "menuAdmi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.menuAdmi_FormClosed);
             this.Load += new System.EventHandler(this.menuAdmi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

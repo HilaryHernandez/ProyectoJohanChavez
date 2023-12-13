@@ -30,12 +30,24 @@ namespace ProyectoJohanChavez
             calcular.Show();
         }
 
+        private void menuAdmi_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 inicio = new Form1();
+            inicio.Show();
+        }
+
         private void buttonRegistrarUsuario_Click(object sender, EventArgs e)
         {
-            registrarUsuario registrar=new registrarUsuario();
+            registrarUsuario registrar = new registrarUsuario();
             this.Hide();
             registrar.Show();
+        }
 
+        private void buttonActualizarDatos_Click(object sender, EventArgs e)
+        {
+            modificarDatos mod = new modificarDatos();
+            this.Hide();
+            mod.Show();
         }
     }
 }
