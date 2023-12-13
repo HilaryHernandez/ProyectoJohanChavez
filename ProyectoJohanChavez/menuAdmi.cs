@@ -20,6 +20,7 @@ namespace ProyectoJohanChavez
         private void menuAdmi_Load(object sender, EventArgs e)
         {
 
+
         }
     }
 }
