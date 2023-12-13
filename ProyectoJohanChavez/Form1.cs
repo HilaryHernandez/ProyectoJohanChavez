@@ -66,8 +66,12 @@ namespace ProyectoJohanChavez
 
         private void buttonOmitir_Click_1(object sender, EventArgs e)
         {
-            menuUser.Visible = true;
-            groupInicioSesion.Visible = false;
+            //menuUser.Visible = true;
+            //groupInicioSesion.Visible = false;
+
+            modificarDatos mod = new modificarDatos();
+            this.Hide();
+            mod.Show();
         }
 
         private void groupInicioSesion_Enter(object sender, EventArgs e)
@@ -100,10 +104,12 @@ namespace ProyectoJohanChavez
             }
             else if (lector.HasRows == true)
             {
-                menu menu = new menu();
+                //menu menu = new menu();
+                //this.Hide();
+                //menu.Show();
+                menuAdmi admin = new menuAdmi();
                 this.Hide();
-                menu.Show();
-                
+                admin.Show();
 
             }
             else

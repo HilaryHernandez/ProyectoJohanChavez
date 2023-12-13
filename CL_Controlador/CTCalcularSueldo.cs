@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,9 +36,19 @@ namespace CL_Controlador
 
         public static String CalcularArl(double ibc, String nivelRiesgo)
         {
+            DataTable dt = new DataTable();
+            dt = CT_Variables.CTconsultarVariables();
+            
             switch (nivelRiesgo)
             {
-                case "Nivel l": return (ibc * 0.00522) + "";
+                case "Nivel l":
+                    string porcentaje = dt.Rows[7]["porcentaje"].ToString();
+                    string resultado = " ";
+                     if(double.TryParse(porcentaje, out double numeroConvertido))
+                    {
+                        resultado = numeroConvertido.ToString();
+                    }
+                     return resultado;
                     
                 case "Nivel ll": return (ibc * 0.01044) + "";
                     
@@ -53,6 +64,9 @@ namespace CL_Controlador
 
         public static String CalcularEps(int ibc)
         {
+            DataTable dt = new DataTable();
+           
+
             return ((ibc * 8.5) / 100).ToString();
         }
 
@@ -80,7 +94,7 @@ namespace CL_Controlador
             return ((sueldoTotal * diasTrabajados) / 720).ToString();
         }
 
-        public static String calcularInteresesCesantias(int cesantias, int diasTrabajados)
+        public static String calcularInteresesCesantias(double cesantias, double diasTrabajados)
         {
             return ((((cesantias * diasTrabajados)*12)/100) / 360).ToString();
         }

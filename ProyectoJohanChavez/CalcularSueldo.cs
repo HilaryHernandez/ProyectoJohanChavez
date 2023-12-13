@@ -82,7 +82,7 @@ namespace ProyectoJohanChavez
                 //Prestaciones sociales
                 labelCesantiasPS.Text = CTCalcularSueldo.calcularCesantias(int.Parse(labelSueldo.Text),int.Parse(labelDiasTrabajados.Text));
                 labelVacacionesPS.Text = CTCalcularSueldo.calcularVacaciones(int.Parse(labelSueldo.Text), int.Parse(labelDiasTrabajados.Text));
-                labelInteresCesantiasPS.Text = CTCalcularSueldo.calcularInteresesCesantias(int.Parse(labelCesantiasPS.Text), int.Parse(labelDiasTrabajados.Text));
+                labelInteresCesantiasPS.Text = CTCalcularSueldo.calcularInteresesCesantias(double.Parse(labelCesantiasPS.Text), double.Parse(labelDiasTrabajados.Text));
                 labelPensionSST.Text =CTCalcularSueldo.CalcularPensionEmpleado(int.Parse(labelSueldo.Text));
                 labelEpsSST.Text =CTCalcularSueldo.CalcularEpsEmpleado(int.Parse(labelSueldo.Text));
                 //prima y liquidacion

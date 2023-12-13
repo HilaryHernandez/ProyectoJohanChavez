@@ -272,6 +272,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\boligrafo.png" />
     <Content Include="Resources\Nullimage.png" />
     <Content Include="Resources\peinados-para-frentonas-1.png" />
   </ItemGroup>

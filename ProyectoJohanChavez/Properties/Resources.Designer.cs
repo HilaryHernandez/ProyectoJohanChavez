@@ -73,6 +73,16 @@ namespace ProyectoJohanChavez.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boligrafo {
+            get {
+                object obj = ResourceManager.GetObject("boligrafo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap datos_del_usuario {
             get {
                 object obj = ResourceManager.GetObject("datos-del-usuario", resourceCulture);

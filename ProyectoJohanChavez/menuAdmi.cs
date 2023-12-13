@@ -22,5 +22,12 @@ namespace ProyectoJohanChavez
 
 
         }
+
+        private void buttonCalcularSueldo_Click(object sender, EventArgs e)
+        {
+            CalcularSueldo calcular = new CalcularSueldo();
+            this.Hide();
+            calcular.Show();
+        }
     }
 }

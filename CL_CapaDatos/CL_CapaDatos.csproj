@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="DA_Base.cs" />
     <Compile Include="DA_Usuario.cs" />
+    <Compile Include="DA_Variables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
