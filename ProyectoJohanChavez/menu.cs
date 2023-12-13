@@ -25,7 +25,7 @@ namespace ProyectoJohanChavez
             
         }
         Form1 form1;
-        PanelUsuario panelUsuario=new PanelUsuario();
+        
 
         public int documento
         {
@@ -35,11 +35,11 @@ namespace ProyectoJohanChavez
 
         private void buttonPanelUsuario_Click(object sender, EventArgs e)
         {
-
+            PanelUsuario panelUsuario = new PanelUsuario();
             panelUsuario.datagrid.Visible = false;
             panelUsuario.textbox.Text = doc.ToString();
             panelUsuario.Show();
-
+            this.Hide();
 
 
         }
@@ -53,6 +53,16 @@ namespace ProyectoJohanChavez
         {
             Form1 form = new Form1();
             form.Show();
+        }
+
+        private void buttonCalcularSueldo_Click(object sender, EventArgs e)
+        {
+            CalcularSueldo calcular = new CalcularSueldo();
+            this.Hide();
+            calcular.cb.SelectedIndex = 1;
+            calcular.cb.Enabled = false;
+            calcular.tip = 2;
+            calcular.Show();
         }
     }
 }

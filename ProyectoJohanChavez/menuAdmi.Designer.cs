@@ -90,10 +90,10 @@
             this.buttonActualizarDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonActualizarDatos.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonActualizarDatos.ForeColor = System.Drawing.Color.Azure;
-            this.buttonActualizarDatos.Location = new System.Drawing.Point(409, 464);
+            this.buttonActualizarDatos.Location = new System.Drawing.Point(423, 459);
             this.buttonActualizarDatos.Margin = new System.Windows.Forms.Padding(4);
             this.buttonActualizarDatos.Name = "buttonActualizarDatos";
-            this.buttonActualizarDatos.Size = new System.Drawing.Size(178, 65);
+            this.buttonActualizarDatos.Size = new System.Drawing.Size(151, 65);
             this.buttonActualizarDatos.TabIndex = 10;
             this.buttonActualizarDatos.Text = "ACTUALIZAR DATOS PARA CALCULAR SUELDO";
             this.buttonActualizarDatos.UseVisualStyleBackColor = false;
@@ -104,18 +104,19 @@
             this.buttonConsultarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonConsultarUsuario.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultarUsuario.ForeColor = System.Drawing.Color.Azure;
-            this.buttonConsultarUsuario.Location = new System.Drawing.Point(731, 250);
+            this.buttonConsultarUsuario.Location = new System.Drawing.Point(730, 250);
             this.buttonConsultarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.buttonConsultarUsuario.Name = "buttonConsultarUsuario";
             this.buttonConsultarUsuario.Size = new System.Drawing.Size(151, 55);
             this.buttonConsultarUsuario.TabIndex = 14;
             this.buttonConsultarUsuario.Text = "CONSULTAR UN USUARIO";
             this.buttonConsultarUsuario.UseVisualStyleBackColor = false;
+            this.buttonConsultarUsuario.Click += new System.EventHandler(this.buttonConsultarUsuario_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::ProyectoJohanChavez.Properties.Resources.actualizar_pagina;
-            this.pictureBox5.Location = new System.Drawing.Point(484, 373);
+            this.pictureBox5.Location = new System.Drawing.Point(468, 374);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(64, 68);
@@ -125,7 +126,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::ProyectoJohanChavez.Properties.Resources.consulta;
-            this.pictureBox4.Location = new System.Drawing.Point(789, 155);
+            this.pictureBox4.Location = new System.Drawing.Point(776, 155);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 71);
@@ -135,7 +136,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoJohanChavez.Properties.Resources.presupuesto;
-            this.pictureBox2.Location = new System.Drawing.Point(126, 126);
+            this.pictureBox2.Location = new System.Drawing.Point(150, 155);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(68, 71);
             this.pictureBox2.TabIndex = 8;
@@ -144,7 +145,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoJohanChavez.Properties.Resources.registroUsuario;
-            this.pictureBox1.Location = new System.Drawing.Point(484, 155);
+            this.pictureBox1.Location = new System.Drawing.Point(468, 155);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 71);
@@ -156,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(800, 531);
+            this.ClientSize = new System.Drawing.Size(973, 583);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.buttonConsultarUsuario);

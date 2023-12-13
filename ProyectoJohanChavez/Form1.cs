@@ -6,6 +6,7 @@ using static ProyectoJohanChavez.PanelUsuario;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using CL_Controlador;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace ProyectoJohanChavez
 {
@@ -62,6 +63,8 @@ namespace ProyectoJohanChavez
 
             CalcularSueldo calcular = new CalcularSueldo();
             this.Hide();
+            calcular.cb.SelectedIndex = 0;
+            calcular.cb.Enabled = false;
             calcular.Show();
 
             //modificarDatos mod = new modificarDatos();
@@ -77,7 +80,7 @@ namespace ProyectoJohanChavez
 
 
         public static String CadenaConexion = "Server=localhost; DATABASE=trabajadores; UID=root; PASSWORD=";
-        public MySqlConnection conexion = new MySqlConnection(CadenaConexion);
+        public MySql.Data.MySqlClient.MySqlConnection conexion = new MySql.Data.MySqlClient.MySqlConnection(CadenaConexion);
         public string documento;
         
 
@@ -89,13 +92,16 @@ namespace ProyectoJohanChavez
             {
                 if (int.Parse(dt.Rows[0][12].ToString()) == 1)
                 {
+
                     menuAdmi menuadmi = new menuAdmi();
+                    menuadmi.documento = int.Parse(IdentificaciónInicioSesion.Text);
                     menuadmi.Show();
                     this.Hide();
                 }
                 else if (int.Parse(dt.Rows[0][12].ToString()) == 2)
                 {
                     menu menu = new menu();
+                    menu.doc = int.Parse(IdentificaciónInicioSesion.Text);
                     menu.Show();
                     this.Hide();
                 }

@@ -48,6 +48,7 @@
             this.buttonCalcularSueldo.TabIndex = 0;
             this.buttonCalcularSueldo.Text = "CALCULAR SUELDO";
             this.buttonCalcularSueldo.UseVisualStyleBackColor = false;
+            this.buttonCalcularSueldo.Click += new System.EventHandler(this.buttonCalcularSueldo_Click);
             // 
             // buttonPanelUsuario
             // 

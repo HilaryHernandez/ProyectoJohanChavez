@@ -12,9 +12,16 @@ namespace ProyectoJohanChavez
 {
     public partial class menuAdmi : Form
     {
+        int doc;
         public menuAdmi()
         {
             InitializeComponent();
+        }
+
+        public int documento
+        {
+            get { return doc; }
+            set { doc = value; }
         }
 
         private void menuAdmi_Load(object sender, EventArgs e)
@@ -26,6 +33,7 @@ namespace ProyectoJohanChavez
         private void buttonCalcularSueldo_Click(object sender, EventArgs e)
         {
             CalcularSueldo calcular = new CalcularSueldo();
+            calcular.tip = 1;
             this.Hide();
             calcular.Show();
         }
@@ -48,6 +56,16 @@ namespace ProyectoJohanChavez
             modificarDatos mod = new modificarDatos();
             this.Hide();
             mod.Show();
+        }
+
+        private void buttonConsultarUsuario_Click(object sender, EventArgs e)
+        {
+            PanelUsuario panelUsuario = new PanelUsuario();
+            panelUsuario.datagrid.Visible = true;
+            panelUsuario.textbox.Text = doc.ToString();
+            panelUsuario.tip = 1;
+            panelUsuario.Show();
+            this.Hide();
         }
     }
 }

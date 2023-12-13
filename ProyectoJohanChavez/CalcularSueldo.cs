@@ -14,6 +14,7 @@ namespace ProyectoJohanChavez
 {
     public partial class CalcularSueldo : Form
     {
+        int tipo = 0;
         public CalcularSueldo()
         {
             InitializeComponent();
@@ -23,6 +24,12 @@ namespace ProyectoJohanChavez
         {
             get { return cbTipoTrabajador; }
             set { cbTipoTrabajador=value;}
+        }
+
+        public int tip
+        {
+            get { return tipo; }
+            set { tipo = value; }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -99,8 +106,21 @@ namespace ProyectoJohanChavez
 
         private void CalcularSueldo_FormClosed(object sender, FormClosedEventArgs e)
         {
-            menuAdmi admin = new menuAdmi();
-            admin.Show();
+            if (tipo == 1)
+            {
+                menuAdmi form = new menuAdmi();
+                form.Show();
+            }
+            else if (tipo==2)
+            {
+                menu form = new menu();
+                form.Show();
+            }
+            else
+            {
+                Form1 form = new Form1();
+                form.Show();
+            }
         }
 
         private void labelSueldo_Click(object sender, EventArgs e)

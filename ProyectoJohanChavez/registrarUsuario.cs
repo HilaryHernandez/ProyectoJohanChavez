@@ -22,11 +22,7 @@ namespace ProyectoJohanChavez
 
         private void buttonRegistrar_Click(object sender, EventArgs e)
         {
-            //CARGA DE IMAGEN A BYTE PARA DESPUES PASARLO A LA BASE DE DATOS
-            MemoryStream ms = new MemoryStream();
-            pictureBox1.Image.Save(ms, ImageFormat.Png);
-            
-            byte[] aByte = ms.ToArray();
+           
 
 
             CE_Usuario usuario=new CE_Usuario();
@@ -40,11 +36,16 @@ namespace ProyectoJohanChavez
             usuario.cargo=cargo.Text;
             usuario.nivelRiesgo = comboBoxNivelRiesgo.SelectedIndex + 1;
             usuario.contraseña=contraseña.Text;
-            usuario.rol = comboBoxRol.SelectedIndex + 1;
-            usuario.imagen = aByte;
-
-            CL_Controlador.CT_Usuario.CTRegistrarUsuario(usuario);
-            MessageBox.Show("REGISTRO EXITOSO");
+            usuario.rol = cbRol.SelectedIndex + 1;
+            if (CL_Controlador.CT_Usuario.CTRegistrarUsuario(usuario))
+            {
+                MessageBox.Show("REGISTRO EXITOSO");
+            }
+            else
+            {
+                MessageBox.Show("Error en el registro");
+            }
+            
 
             
 
@@ -71,6 +72,17 @@ namespace ProyectoJohanChavez
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void registrarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registrarUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menuAdmi menuadmi = new menuAdmi();
+            menuadmi.Show();
         }
     }
 }

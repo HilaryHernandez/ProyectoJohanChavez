@@ -70,37 +70,25 @@ namespace CL_CapaDatos
 
 
         public static bool RegistrarUsuario(CE_Usuario objUsuario)
-        {
-            String insertar= "insert into usuario(noDocumento,tipoDocumento, nombre, apellido, direccion, telefono, correo, cargo, nivelRiesgo, imagen, contraseña, idRol)values(@noDocumento,@tipoDocumento, @nombre, @apellido, @direccion, @telefono, @correo, @cargo,@nivelRiesgo,@imagen,@contraseña, @idRol)";
-            List<MySqlParameter> parametros = new List<MySqlParameter>();
-            parametros.Add(new MySqlParameter("@noDocumento", MySqlDbType.Int64) { Value=objUsuario.noDocumento});
-            parametros.Add(new MySqlParameter("@tipoDocumento", MySqlDbType.VarChar) { Value=objUsuario.tipoDocumento});
-            parametros.Add(new MySqlParameter("@nombre", MySqlDbType.VarChar) { Value=objUsuario.nombre});
-            parametros.Add(new MySqlParameter("@apellido", MySqlDbType.VarChar) { Value=objUsuario.apellido});
-            parametros.Add(new MySqlParameter("@direccion", MySqlDbType.VarChar) { Value=objUsuario.direccion});
-            parametros.Add(new MySqlParameter("@telefono", MySqlDbType.Int64) { Value=objUsuario.telefono});
-            parametros.Add(new MySqlParameter("@correo", MySqlDbType.VarChar) { Value=objUsuario.correo});
-            parametros.Add(new MySqlParameter("@cargo", MySqlDbType.VarChar) { Value=objUsuario.cargo});
-            parametros.Add(new MySqlParameter("@nivelReisgo", MySqlDbType.Int64) { Value=objUsuario.nivelRiesgo});
-            parametros.Add(new MySqlParameter("@imagen", MySqlDbType.LongBlob) { Value=objUsuario.imagen});
-            parametros.Add(new MySqlParameter("@contraseña", MySqlDbType.VarChar) { Value=objUsuario.contraseña});
-            parametros.Add(new MySqlParameter("@idRol", MySqlDbType.Int64) { Value=objUsuario.rol});
-            return RealizarTransaccion2(insertar,parametros);
+        { 
+                String insertar = "insert into usuario(noDocumento,tipoDocumento, nombre, apellido, direccion, telefono, correo, cargo, nivelRiesgo, contraseña, idRol)values("+objUsuario.noDocumento+",'"+objUsuario.tipoDocumento+"', '"+objUsuario.nombre+"', '"+objUsuario.apellido+"', '"+objUsuario.direccion+"', "+objUsuario.telefono+", '"+objUsuario.correo+"', '"+objUsuario.cargo+"','"+objUsuario.nivelRiesgo+"','"+objUsuario.contraseña+"', "+objUsuario.rol+")";
+
+            return RealizarTransaccion(insertar);
         }
 
 
+        public static DataTable ConsultarLogin(string IdentificaciónInicioSesion, string ContraseñaInicioSesion)
+        {
+            string codigo = "select * from usuario WHERE noDocumento='" + IdentificaciónInicioSesion + "' and contraseña='" + ContraseñaInicioSesion + "'";
 
-        
-        
-
-
-
+            return ConsultarDatos(codigo);
+        }
     }
 
-    public static DataTable ConsultarLogin(string IdentificaciónInicioSesion, string ContraseñaInicioSesion)
-    {
-        string codigo = "select * from usuario WHERE noDocumento='" + IdentificaciónInicioSesion + "' and contraseña='" + ContraseñaInicioSesion + "'";
 
-        return ConsultarDatos(codigo);
-    }
+
+
+
 }
+
+    
