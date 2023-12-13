@@ -1,5 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using MySqlConnector;
+using static ProyectoJohanChavez.PanelUsuario;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using CL_Controlador;
 using MySql.Data.MySqlClient;
 
 namespace ProyectoJohanChavez
@@ -17,9 +22,7 @@ namespace ProyectoJohanChavez
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            menuAdmin.Visible = false;
-            menuUser.Visible = false;
-            menuEmpleado.Visible = false;
+            
         }
 
         private void tabPage5_Click(object sender, EventArgs e)
@@ -34,7 +37,7 @@ namespace ProyectoJohanChavez
 
         public void activarUser()
         {
-            menuUser.Visible = true;
+            
         }
 
         private void calcularSueldoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,36 +83,27 @@ namespace ProyectoJohanChavez
 
         private void buttonIngresar_Click_1(object sender, EventArgs e)
         {
-
-            conexion.Open();
-            string validacion = "select * from usuario WHERE noDocumento='" + IdentificaciónInicioSesion.Text + "' and contraseña='" + ContraseñaInicioSesion.Text + "'";
-
-            
-
-
-            MySqlCommand comando = new MySqlCommand(validacion, conexion);
-            MySqlDataReader lector = comando.ExecuteReader();
-
-            if (IdentificaciónInicioSesion.Text == string.Empty || ContraseñaInicioSesion.Text == string.Empty)
+            DataTable dt = new DataTable();
+            dt=CT_Usuario.CTConsultarLogin(IdentificaciónInicioSesion.Text, ContraseñaInicioSesion.Text);
+            if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Los campos deben estar llenos");
-            }
-            else if (lector.HasRows == true)
-            {
-                //menu menu = new menu();
-                //this.Hide();
-                //menu.Show();
-                menuAdmi admin = new menuAdmi();
-                this.Hide();
-                admin.Show();
-
+                if (int.Parse(dt.Rows[0][12].ToString()) == 1)
+                {
+                    menuAdmi menuadmi = new menuAdmi();
+                    menuadmi.Show();
+                    this.Hide();
+                }
+                else if (int.Parse(dt.Rows[0][12].ToString()) == 2)
+                {
+                    menu menu = new menu();
+                    menu.Show();
+                    this.Hide();
+                }
             }
             else
             {
-                MessageBox.Show("DOCUMENTO O CONTRRASEÑA INCORRECTOS");
+                MessageBox.Show("Usuario o contraseña incorrectos");
             }
-            
-            conexion.Close();
             
         }
 

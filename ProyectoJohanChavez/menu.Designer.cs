@@ -104,6 +104,8 @@
             this.Controls.Add(this.buttonCalcularSueldo);
             this.Name = "menu";
             this.Text = "menu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.menu_FormClosed);
+            this.Load += new System.EventHandler(this.menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

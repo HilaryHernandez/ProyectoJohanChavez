@@ -47,7 +47,26 @@ namespace CL_CapaDatos
             return File.ReadAllBytes(rutaImagen);
         }
 
-        
+        public static DataTable ConsultarUsuarios()
+        {
+            String codigo = "select * from usuario;";
+
+            return ConsultarDatos(codigo);
+        }
+
+        public static DataTable ConsultarUsuarioPorDocumento(int documento)
+        {
+            String codigo = "select * from usuario where noDocumento="+documento+";";
+
+            return ConsultarDatos(codigo);
+        }
+
+        public static bool ActualizarUsuario(CE_Usuario objUsuario)
+        {
+            String codigo = "update usuario set correo='"+objUsuario.correo+"',direccion='"+objUsuario.direccion+"',telefono="+objUsuario.telefono+",contraseña='"+objUsuario.contraseña+"' where noDocumento="+objUsuario.noDocumento+";";
+
+            return RealizarTransaccion(codigo);
+        }
 
 
         public static bool RegistrarUsuario(CE_Usuario objUsuario)
@@ -72,5 +91,16 @@ namespace CL_CapaDatos
 
 
         
+        
+
+
+
+    }
+
+    public static DataTable ConsultarLogin(string IdentificaciónInicioSesion, string ContraseñaInicioSesion)
+    {
+        string codigo = "select * from usuario WHERE noDocumento='" + IdentificaciónInicioSesion + "' and contraseña='" + ContraseñaInicioSesion + "'";
+
+        return ConsultarDatos(codigo);
     }
 }

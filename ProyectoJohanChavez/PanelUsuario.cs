@@ -22,14 +22,25 @@ namespace ProyectoJohanChavez
 
     public partial class PanelUsuario : Form
     {
-        public string documento;
+        
         public PanelUsuario()
         {
             InitializeComponent();
 
+
         }
 
+        public DataGridView datagrid
+        {
+            get { return dataGridView1; }
+            set { dataGridView1 = value; }
+        }
 
+        public TextBox textbox
+        {
+            get { return textBoxDocumento; }
+            set { textBoxDocumento = value; }
+        }
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -43,21 +54,41 @@ namespace ProyectoJohanChavez
 
         public void PanelUsuario_Load(object sender, EventArgs e)
         {
-            
+            DataTable dt = new DataTable();
+            dt = CT_Usuario.CTConsultarUsuario();
+            dataGridView1.DataSource = dt;
+            dataGridView1.Columns[0].Visible = false;
+            DataGridViewButtonColumn colum = new DataGridViewButtonColumn();
+            colum.Name = "Seleccionar";
+            colum.Text = "Seleccionar";
+            dataGridView1.Columns.Add(colum);
+            DataTable dt2 = new DataTable();
+            dt2 = CT_Usuario.CTConsultarUsuarioPorDocumento(int.Parse(textBoxDocumento.Text));
+            textBoxTipoDocumento.Text = dt2.Rows[0][2].ToString();
+            textBoxNombres.Text = dt2.Rows[0][3].ToString();
+            textBoxApellidos.Text = dt2.Rows[0][4].ToString();
+            textBoxDireccion.Text = dt2.Rows[0][5].ToString();
+            textBoxTelefono.Text = dt2.Rows[0][6].ToString();
+            textBoxCorreo.Text = dt2.Rows[0][7].ToString();
+            textBoxCargo.Text = dt2.Rows[0][8].ToString();
+            textBoxNivelRiesgo.Text = dt2.Rows[0][9].ToString();
+            MemoryStream ms = new MemoryStream((byte[])dt2.Rows[0][10]);
+            Bitmap bm = new Bitmap(ms);
+            pictureBox1.Image = bm;
+            textBoxContraseña.Text = dt2.Rows[0][11].ToString();
+            if (int.Parse(dt2.Rows[0][12].ToString())== 1)
+            {
+                comboBoxRol.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBoxRol.SelectedIndex = 1;
+            }
         }
 
         
 
 
-
-        public static Form1 form1=new Form1();
-        public static String CadenaConexion = "Server=localhost; DATABASE=trabajadores; UID=root; PASSWORD=";
-        public MySqlConnection conexion = new MySqlConnection(CadenaConexion);
-
-
-        public static string img = "SELECT imagen FROM usuario WHERE noDocumento='" + form1.documento + "'";
-
-        public static string docum = form1.documento;
      
         private void button1_Click(object sender, EventArgs e)
         {
@@ -81,6 +112,30 @@ namespace ProyectoJohanChavez
         private void buttonRiesgos_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void buttonActualizarU_Click(object sender, EventArgs e)
+        {
+            CE_Usuario objUsuario = new CE_Usuario();
+            objUsuario.noDocumento =int.Parse (textBoxDocumento.Text);
+            objUsuario.telefono =textBoxTelefono.Text;
+            objUsuario.direccion =textBoxDireccion.Text;
+            objUsuario.correo =textBoxCorreo.Text;
+            objUsuario.contraseña =textBoxContraseña.Text;
+            if (CT_Usuario.CTActualizarUsuario(objUsuario))
+            {
+                MessageBox.Show("Actualizacion correcta");
+            }
+            else
+            {
+                MessageBox.Show("Error en la actualizacion");
+            }
+        }
+
+        private void PanelUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menu form = new menu();
+            form.Show();
         }
     }
 }

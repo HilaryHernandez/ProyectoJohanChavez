@@ -191,25 +191,17 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Project";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuUser.ResumeLayout(false);
-            this.menuUser.PerformLayout();
             this.groupInicioSesion.ResumeLayout(false);
             this.groupInicioSesion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuEmpleado;
-        private System.Windows.Forms.MenuStrip menuAdmin;
-        private System.Windows.Forms.MenuStrip menuUser;
-        private System.Windows.Forms.ToolStripMenuItem calcularSueldoToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupInicioSesion;
         private System.Windows.Forms.Button buttonIngresar;
         private System.Windows.Forms.Button buttonOmitir;
