@@ -832,6 +832,7 @@
             this.labelSueldo.Size = new System.Drawing.Size(40, 22);
             this.labelSueldo.TabIndex = 45;
             this.labelSueldo.Text = "-----";
+            this.labelSueldo.Click += new System.EventHandler(this.labelSueldo_Click);
             // 
             // label43
             // 

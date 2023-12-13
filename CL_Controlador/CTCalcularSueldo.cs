@@ -162,7 +162,7 @@ namespace CL_Controlador
 
         public static String calcularInteresesCesantias(double cesantias, double diasTrabajados)
         {
-            return ((((cesantias * diasTrabajados)*12)/100) / 360).ToString();
+            return (((cesantias*diasTrabajados)*0.12)/360).ToString();
         }
 
         public static String CalcularEpsEmpleado(int sueldoTotal)

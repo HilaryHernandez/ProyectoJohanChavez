@@ -102,5 +102,10 @@ namespace ProyectoJohanChavez
             menuAdmi admin = new menuAdmi();
             admin.Show();
         }
+
+        private void labelSueldo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
