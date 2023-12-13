@@ -51,6 +51,9 @@
             this.contraseña = new System.Windows.Forms.TextBox();
             this.cargo = new System.Windows.Forms.TextBox();
             this.telefono = new System.Windows.Forms.TextBox();
+            this.CargarImagen = new System.Windows.Forms.Button();
+            this.comboBoxRol = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,7 +180,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(579, 106);
+            this.pictureBox1.Location = new System.Drawing.Point(585, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 111);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,6 +198,7 @@
             this.buttonRegistrar.TabIndex = 90;
             this.buttonRegistrar.Text = "REGISTRAR";
             this.buttonRegistrar.UseVisualStyleBackColor = false;
+            this.buttonRegistrar.Click += new System.EventHandler(this.buttonRegistrar_Click);
             // 
             // comboBoxDocumento
             // 
@@ -286,12 +290,51 @@
             this.telefono.Size = new System.Drawing.Size(187, 20);
             this.telefono.TabIndex = 118;
             // 
+            // CargarImagen
+            // 
+            this.CargarImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CargarImagen.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CargarImagen.ForeColor = System.Drawing.Color.Azure;
+            this.CargarImagen.Location = new System.Drawing.Point(702, 73);
+            this.CargarImagen.Name = "CargarImagen";
+            this.CargarImagen.Size = new System.Drawing.Size(86, 46);
+            this.CargarImagen.TabIndex = 122;
+            this.CargarImagen.Text = "CARGAR";
+            this.CargarImagen.UseVisualStyleBackColor = false;
+            this.CargarImagen.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBoxRol
+            // 
+            this.comboBoxRol.FormattingEnabled = true;
+            this.comboBoxRol.Items.AddRange(new object[] {
+            "ADMINISTRADOR",
+            "EMPLEADO"});
+            this.comboBoxRol.Location = new System.Drawing.Point(566, 195);
+            this.comboBoxRol.Name = "comboBoxRol";
+            this.comboBoxRol.Size = new System.Drawing.Size(187, 21);
+            this.comboBoxRol.TabIndex = 123;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(500, 199);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 17);
+            this.label3.TabIndex = 124;
+            this.label3.Text = "*ROL:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // registrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(800, 531);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBoxRol);
+            this.Controls.Add(this.CargarImagen);
             this.Controls.Add(this.comboBoxNivelRiesgo);
             this.Controls.Add(this.contraseña);
             this.Controls.Add(this.cargo);
@@ -348,5 +391,8 @@
         private System.Windows.Forms.TextBox contraseña;
         private System.Windows.Forms.TextBox cargo;
         private System.Windows.Forms.TextBox telefono;
+        private System.Windows.Forms.Button CargarImagen;
+        private System.Windows.Forms.ComboBox comboBoxRol;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -43,7 +43,7 @@ namespace ProyectoJohanChavez
 
         public void PanelUsuario_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         
@@ -61,7 +61,7 @@ namespace ProyectoJohanChavez
      
         private void button1_Click(object sender, EventArgs e)
         {
-            label10.Text = "1122";
+
             CE_CapaEntidades.CE_Usuario objUsuario= new CE_Usuario();
             objUsuario.noDocumento= int.Parse(label10.Text);
             DataTable dt= new DataTable();
@@ -80,7 +80,7 @@ namespace ProyectoJohanChavez
 
         private void buttonRiesgos_Click(object sender, EventArgs e)
         {
-            CL_Controlador.CT_Usuario.CTInsertarImagen();
+            
         }
     }
 }

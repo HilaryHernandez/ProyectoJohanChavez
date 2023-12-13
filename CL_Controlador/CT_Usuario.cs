@@ -19,5 +19,10 @@ namespace CL_Controlador
         {
             return DA_Usuario.InsertarImagen();
         }
+
+        public static bool CTRegistrarUsuario(CE_CapaEntidades.CE_Usuario objUsuario)
+        {
+            return DA_Usuario.RegistrarUsuario(objUsuario);
+        }
     }
 }

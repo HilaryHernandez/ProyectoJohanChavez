@@ -10,6 +10,7 @@ using System.IO;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Common;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace CL_CapaDatos
 {
@@ -28,6 +29,8 @@ namespace CL_CapaDatos
 
         public static bool InsertarImagen()
         {
+
+
             string rutaImagen = "prueba.jpg";
 
             // Convierte la imagen a un array de bytes
@@ -42,6 +45,28 @@ namespace CL_CapaDatos
         {
             // Lee la imagen como un array de bytes
             return File.ReadAllBytes(rutaImagen);
+        }
+
+        
+
+
+        public static bool RegistrarUsuario(CE_Usuario objUsuario)
+        {
+            String insertar= "insert into usuario(noDocumento,tipoDocumento, nombre, apellido, direccion, telefono, correo, cargo, nivelRiesgo, imagen, contraseña, idRol)values(@noDocumento,@tipoDocumento, @nombre, @apellido, @direccion, @telefono, @correo, @cargo,@nivelRiesgo,@imagen,@contraseña, @idRol)";
+            List<MySqlParameter> parametros = new List<MySqlParameter>();
+            parametros.Add(new MySqlParameter("@noDocumento", MySqlDbType.Int64) { Value=objUsuario.noDocumento});
+            parametros.Add(new MySqlParameter("@tipoDocumento", MySqlDbType.VarChar) { Value=objUsuario.tipoDocumento});
+            parametros.Add(new MySqlParameter("@nombre", MySqlDbType.VarChar) { Value=objUsuario.nombre});
+            parametros.Add(new MySqlParameter("@apellido", MySqlDbType.VarChar) { Value=objUsuario.apellido});
+            parametros.Add(new MySqlParameter("@direccion", MySqlDbType.VarChar) { Value=objUsuario.direccion});
+            parametros.Add(new MySqlParameter("@telefono", MySqlDbType.Int64) { Value=objUsuario.telefono});
+            parametros.Add(new MySqlParameter("@correo", MySqlDbType.VarChar) { Value=objUsuario.correo});
+            parametros.Add(new MySqlParameter("@cargo", MySqlDbType.VarChar) { Value=objUsuario.cargo});
+            parametros.Add(new MySqlParameter("@nivelReisgo", MySqlDbType.Int64) { Value=objUsuario.nivelRiesgo});
+            parametros.Add(new MySqlParameter("@imagen", MySqlDbType.LongBlob) { Value=objUsuario.imagen});
+            parametros.Add(new MySqlParameter("@contraseña", MySqlDbType.VarChar) { Value=objUsuario.contraseña});
+            parametros.Add(new MySqlParameter("@idRol", MySqlDbType.Int64) { Value=objUsuario.rol});
+            return RealizarTransaccion2(insertar,parametros);
         }
 
 

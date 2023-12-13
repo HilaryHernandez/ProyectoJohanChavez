@@ -29,5 +29,13 @@ namespace ProyectoJohanChavez
             this.Hide();
             calcular.Show();
         }
+
+        private void buttonRegistrarUsuario_Click(object sender, EventArgs e)
+        {
+            registrarUsuario registrar=new registrarUsuario();
+            this.Hide();
+            registrar.Show();
+
+        }
     }
 }

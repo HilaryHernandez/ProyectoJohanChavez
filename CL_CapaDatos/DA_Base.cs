@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Cl_capa_datos
 {
@@ -98,6 +99,55 @@ namespace Cl_capa_datos
                     return true;
                 }
             }
+        }
+
+        public static bool RealizarTransaccion2(string strSQL, List<MySqlParameter> mySqlParameters)
+        {
+
+            bool resultado = false;
+
+            try
+
+            {
+                using (MySqlConnection conn = new MySqlConnection
+                    (CadenaConexion))
+
+                {
+                    conn.Open();
+                    using (MySqlTransaction tr = conn.BeginTransaction())
+                    {
+                        try
+                        {
+                            using (MySqlCommand cmd = new MySqlCommand(strSQL, conn))
+                            {
+                                cmd.Transaction = tr;
+
+                                // Asigna los parámetros a la consulta
+                                if (mySqlParameters != null)
+                                {
+                                    cmd.Parameters.AddRange(mySqlParameters.ToArray());
+                                }
+
+                                cmd.ExecuteNonQuery();
+                            }
+                            tr.Commit();
+                            resultado = true;
+                        }
+                        catch (Exception)
+                        {
+                            tr.Rollback();
+                            resultado = false;
+                            throw;
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Excepción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
         }
 
     }
