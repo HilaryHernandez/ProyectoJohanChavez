@@ -195,5 +195,11 @@ namespace ProyectoJohanChavez
                 MessageBox.Show("Actualización fallida");
             }
         }
+
+        private void modificarDatos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menuAdmi admin = new menuAdmi();
+            admin.Show();
+        }
     }
 }

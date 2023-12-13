@@ -73,9 +73,29 @@ namespace ProyectoJohanChavez.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap actualizar_pagina {
+            get {
+                object obj = ResourceManager.GetObject("actualizar-pagina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boligrafo {
             get {
                 object obj = ResourceManager.GetObject("boligrafo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap consulta {
+            get {
+                object obj = ResourceManager.GetObject("consulta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,16 @@ namespace ProyectoJohanChavez.Properties {
         internal static System.Drawing.Bitmap presupuesto {
             get {
                 object obj = ResourceManager.GetObject("presupuesto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap registroUsuario {
+            get {
+                object obj = ResourceManager.GetObject("registroUsuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

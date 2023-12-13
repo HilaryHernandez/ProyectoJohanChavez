@@ -16,5 +16,17 @@ namespace ProyectoJohanChavez
         {
             InitializeComponent();
         }
+
+        private void registrarUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menuAdmi admin = new menuAdmi();
+            this.Hide();
+            admin.Show();
+        }
+
+        private void registrarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

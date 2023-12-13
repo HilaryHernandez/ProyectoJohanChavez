@@ -272,7 +272,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\registroUsuario.png" />
     <None Include="Resources\boligrafo.png" />
+    <None Include="Resources\consulta.png" />
+    <None Include="Resources\actualizar-pagina.png" />
     <Content Include="Resources\Nullimage.png" />
     <Content Include="Resources\peinados-para-frentonas-1.png" />
   </ItemGroup>

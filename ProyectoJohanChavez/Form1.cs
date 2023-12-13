@@ -69,9 +69,13 @@ namespace ProyectoJohanChavez
             //menuUser.Visible = true;
             //groupInicioSesion.Visible = false;
 
-            modificarDatos mod = new modificarDatos();
+            CalcularSueldo calcular = new CalcularSueldo();
             this.Hide();
-            mod.Show();
+            calcular.Show();
+
+            //modificarDatos mod = new modificarDatos();
+            //this.Hide();
+            //mod.Show();
         }
 
         private void groupInicioSesion_Enter(object sender, EventArgs e)
@@ -126,6 +130,11 @@ namespace ProyectoJohanChavez
         private void groupInicioSesion_Enter_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
