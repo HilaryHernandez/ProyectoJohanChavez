@@ -51,7 +51,7 @@
             this.groupInicioSesion.Controls.Add(this.label3);
             this.groupInicioSesion.Location = new System.Drawing.Point(4, 6);
             this.groupInicioSesion.Name = "groupInicioSesion";
-            this.groupInicioSesion.Size = new System.Drawing.Size(796, 409);
+            this.groupInicioSesion.Size = new System.Drawing.Size(793, 458);
             this.groupInicioSesion.TabIndex = 3;
             this.groupInicioSesion.TabStop = false;
             this.groupInicioSesion.Text = "Inicio de sesion";
@@ -97,6 +97,7 @@
             this.ContraseñaInicioSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ContraseñaInicioSesion.Location = new System.Drawing.Point(291, 285);
             this.ContraseñaInicioSesion.Name = "ContraseñaInicioSesion";
+            this.ContraseñaInicioSesion.PasswordChar = '*';
             this.ContraseñaInicioSesion.Size = new System.Drawing.Size(210, 20);
             this.ContraseñaInicioSesion.TabIndex = 48;
             // 
@@ -133,11 +134,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(800, 531);
+            this.ClientSize = new System.Drawing.Size(800, 470);
             this.Controls.Add(this.groupInicioSesion);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SueldoManager";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupInicioSesion.ResumeLayout(false);

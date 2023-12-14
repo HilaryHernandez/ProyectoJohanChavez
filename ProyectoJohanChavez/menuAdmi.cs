@@ -27,13 +27,13 @@ namespace ProyectoJohanChavez
         private void menuAdmi_Load(object sender, EventArgs e)
         {
 
-
         }
 
         private void buttonCalcularSueldo_Click(object sender, EventArgs e)
         {
             CalcularSueldo calcular = new CalcularSueldo();
             calcular.tip = 1;
+            calcular.textbox = doc;
             this.Hide();
             calcular.Show();
         }
@@ -47,6 +47,7 @@ namespace ProyectoJohanChavez
         private void buttonRegistrarUsuario_Click(object sender, EventArgs e)
         {
             registrarUsuario registrar = new registrarUsuario();
+            registrar.textbox = int.Parse(doc.ToString());
             this.Hide();
             registrar.Show();
         }
@@ -54,6 +55,7 @@ namespace ProyectoJohanChavez
         private void buttonActualizarDatos_Click(object sender, EventArgs e)
         {
             modificarDatos mod = new modificarDatos();
+            mod.textbox = doc;
             this.Hide();
             mod.Show();
         }
@@ -62,7 +64,7 @@ namespace ProyectoJohanChavez
         {
             PanelUsuario panelUsuario = new PanelUsuario();
             panelUsuario.datagrid.Visible = true;
-            panelUsuario.textbox.Text = doc.ToString();
+            panelUsuario.textbox = doc;
             panelUsuario.tip = 1;
             panelUsuario.Show();
             this.Hide();

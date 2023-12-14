@@ -42,7 +42,7 @@
             this.buttonCalcularSueldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonCalcularSueldo.Font = new System.Drawing.Font("Tw Cen MT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCalcularSueldo.ForeColor = System.Drawing.Color.Azure;
-            this.buttonCalcularSueldo.Location = new System.Drawing.Point(216, 263);
+            this.buttonCalcularSueldo.Location = new System.Drawing.Point(203, 263);
             this.buttonCalcularSueldo.Name = "buttonCalcularSueldo";
             this.buttonCalcularSueldo.Size = new System.Drawing.Size(151, 55);
             this.buttonCalcularSueldo.TabIndex = 0;
@@ -55,7 +55,7 @@
             this.buttonPanelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonPanelUsuario.Font = new System.Drawing.Font("Tw Cen MT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPanelUsuario.ForeColor = System.Drawing.Color.Azure;
-            this.buttonPanelUsuario.Location = new System.Drawing.Point(436, 263);
+            this.buttonPanelUsuario.Location = new System.Drawing.Point(423, 263);
             this.buttonPanelUsuario.Name = "buttonPanelUsuario";
             this.buttonPanelUsuario.Size = new System.Drawing.Size(151, 55);
             this.buttonPanelUsuario.TabIndex = 1;
@@ -66,18 +66,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(295, 99);
+            this.label1.Location = new System.Drawing.Point(272, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 20);
+            this.label1.Size = new System.Drawing.Size(244, 24);
             this.label1.TabIndex = 4;
-            this.label1.Text = "SELECCIONE UNA OPCIÓN:";
+            this.label1.Text = "SELECCIONE UNA OPCIÓN";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoJohanChavez.Properties.Resources.presupuesto;
-            this.pictureBox2.Location = new System.Drawing.Point(261, 186);
+            this.pictureBox2.Location = new System.Drawing.Point(248, 186);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(66, 61);
             this.pictureBox2.TabIndex = 3;
@@ -86,7 +86,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoJohanChavez.Properties.Resources.datos_del_usuario;
-            this.pictureBox1.Location = new System.Drawing.Point(480, 186);
+            this.pictureBox1.Location = new System.Drawing.Point(467, 186);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(66, 61);
             this.pictureBox1.TabIndex = 2;
@@ -97,14 +97,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(800, 531);
+            this.ClientSize = new System.Drawing.Size(783, 434);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonPanelUsuario);
             this.Controls.Add(this.buttonCalcularSueldo);
             this.Name = "menu";
-            this.Text = "menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.menu_FormClosed);
             this.Load += new System.EventHandler(this.menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

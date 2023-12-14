@@ -46,13 +46,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(295, 48);
+            this.label1.Location = new System.Drawing.Point(327, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 20);
+            this.label1.Size = new System.Drawing.Size(244, 24);
             this.label1.TabIndex = 9;
-            this.label1.Text = "SELECCIONE UNA OPCIÓN:";
+            this.label1.Text = "SELECCIONE UNA OPCIÓN";
             // 
             // buttonRegistrarUsuario
             // 
@@ -60,7 +60,7 @@
             this.buttonRegistrarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonRegistrarUsuario.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegistrarUsuario.ForeColor = System.Drawing.Color.Azure;
-            this.buttonRegistrarUsuario.Location = new System.Drawing.Point(423, 250);
+            this.buttonRegistrarUsuario.Location = new System.Drawing.Point(372, 250);
             this.buttonRegistrarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.buttonRegistrarUsuario.Name = "buttonRegistrarUsuario";
             this.buttonRegistrarUsuario.Size = new System.Drawing.Size(151, 55);
@@ -75,7 +75,7 @@
             this.buttonCalcularSueldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonCalcularSueldo.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCalcularSueldo.ForeColor = System.Drawing.Color.Azure;
-            this.buttonCalcularSueldo.Location = new System.Drawing.Point(117, 250);
+            this.buttonCalcularSueldo.Location = new System.Drawing.Point(122, 250);
             this.buttonCalcularSueldo.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCalcularSueldo.Name = "buttonCalcularSueldo";
             this.buttonCalcularSueldo.Size = new System.Drawing.Size(137, 55);
@@ -90,7 +90,7 @@
             this.buttonActualizarDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonActualizarDatos.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonActualizarDatos.ForeColor = System.Drawing.Color.Azure;
-            this.buttonActualizarDatos.Location = new System.Drawing.Point(423, 459);
+            this.buttonActualizarDatos.Location = new System.Drawing.Point(373, 453);
             this.buttonActualizarDatos.Margin = new System.Windows.Forms.Padding(4);
             this.buttonActualizarDatos.Name = "buttonActualizarDatos";
             this.buttonActualizarDatos.Size = new System.Drawing.Size(151, 65);
@@ -104,7 +104,7 @@
             this.buttonConsultarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonConsultarUsuario.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConsultarUsuario.ForeColor = System.Drawing.Color.Azure;
-            this.buttonConsultarUsuario.Location = new System.Drawing.Point(730, 250);
+            this.buttonConsultarUsuario.Location = new System.Drawing.Point(622, 250);
             this.buttonConsultarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.buttonConsultarUsuario.Name = "buttonConsultarUsuario";
             this.buttonConsultarUsuario.Size = new System.Drawing.Size(151, 55);
@@ -116,7 +116,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::ProyectoJohanChavez.Properties.Resources.actualizar_pagina;
-            this.pictureBox5.Location = new System.Drawing.Point(468, 374);
+            this.pictureBox5.Location = new System.Drawing.Point(418, 368);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(64, 68);
@@ -126,7 +126,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::ProyectoJohanChavez.Properties.Resources.consulta;
-            this.pictureBox4.Location = new System.Drawing.Point(776, 155);
+            this.pictureBox4.Location = new System.Drawing.Point(674, 155);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 71);
@@ -136,7 +136,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoJohanChavez.Properties.Resources.presupuesto;
-            this.pictureBox2.Location = new System.Drawing.Point(150, 155);
+            this.pictureBox2.Location = new System.Drawing.Point(160, 155);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(68, 71);
             this.pictureBox2.TabIndex = 8;
@@ -145,7 +145,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoJohanChavez.Properties.Resources.registroUsuario;
-            this.pictureBox1.Location = new System.Drawing.Point(468, 155);
+            this.pictureBox1.Location = new System.Drawing.Point(418, 155);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 71);
@@ -157,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(973, 583);
+            this.ClientSize = new System.Drawing.Size(892, 583);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.buttonConsultarUsuario);
@@ -169,7 +169,8 @@
             this.Controls.Add(this.buttonCalcularSueldo);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "menuAdmi";
-            this.Text = "menuAdmi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu Administrador";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.menuAdmi_FormClosed);
             this.Load += new System.EventHandler(this.menuAdmi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

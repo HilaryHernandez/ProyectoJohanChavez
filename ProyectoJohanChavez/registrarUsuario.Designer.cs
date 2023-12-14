@@ -39,7 +39,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonRegistrar = new System.Windows.Forms.Button();
             this.comboBoxDocumento = new System.Windows.Forms.ComboBox();
             this.correo = new System.Windows.Forms.TextBox();
@@ -56,7 +55,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbRol = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label18
@@ -64,7 +62,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label18.Location = new System.Drawing.Point(433, 289);
+            this.label18.Location = new System.Drawing.Point(425, 261);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(127, 17);
             this.label18.TabIndex = 75;
@@ -75,7 +73,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(492, 234);
+            this.label14.Location = new System.Drawing.Point(484, 206);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 17);
             this.label14.TabIndex = 74;
@@ -86,7 +84,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label16.Location = new System.Drawing.Point(474, 188);
+            this.label16.Location = new System.Drawing.Point(466, 160);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(86, 17);
             this.label16.TabIndex = 73;
@@ -165,29 +163,20 @@
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label19.Location = new System.Drawing.Point(280, 37);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(264, 27);
+            this.label19.Size = new System.Drawing.Size(258, 27);
             this.label19.TabIndex = 76;
-            this.label19.Text = "REGISTRAR UN USUARIO:";
+            this.label19.Text = "REGISTRAR UN USUARIO";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(453, 347);
+            this.label1.Location = new System.Drawing.Point(445, 319);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 17);
             this.label1.TabIndex = 77;
             this.label1.Text = "*CONTRASEÑA:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(589, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 111);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 89;
-            this.pictureBox1.TabStop = false;
             // 
             // buttonRegistrar
             // 
@@ -263,7 +252,7 @@
             "Nivel lll",
             "Nivel lV",
             "Nivel V"});
-            this.comboBoxNivelRiesgo.Location = new System.Drawing.Point(566, 289);
+            this.comboBoxNivelRiesgo.Location = new System.Drawing.Point(558, 261);
             this.comboBoxNivelRiesgo.Name = "comboBoxNivelRiesgo";
             this.comboBoxNivelRiesgo.Size = new System.Drawing.Size(187, 21);
             this.comboBoxNivelRiesgo.TabIndex = 121;
@@ -271,7 +260,7 @@
             // contraseña
             // 
             this.contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.contraseña.Location = new System.Drawing.Point(566, 347);
+            this.contraseña.Location = new System.Drawing.Point(558, 319);
             this.contraseña.Name = "contraseña";
             this.contraseña.Size = new System.Drawing.Size(187, 20);
             this.contraseña.TabIndex = 120;
@@ -279,7 +268,7 @@
             // cargo
             // 
             this.cargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cargo.Location = new System.Drawing.Point(566, 228);
+            this.cargo.Location = new System.Drawing.Point(558, 200);
             this.cargo.Name = "cargo";
             this.cargo.Size = new System.Drawing.Size(187, 20);
             this.cargo.TabIndex = 119;
@@ -287,7 +276,7 @@
             // telefono
             // 
             this.telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.telefono.Location = new System.Drawing.Point(566, 182);
+            this.telefono.Location = new System.Drawing.Point(558, 154);
             this.telefono.Name = "telefono";
             this.telefono.Size = new System.Drawing.Size(187, 20);
             this.telefono.TabIndex = 118;
@@ -334,7 +323,7 @@
             this.cbRol.Items.AddRange(new object[] {
             "ADMINISTRADOR",
             "EMPLEADO"});
-            this.cbRol.Location = new System.Drawing.Point(566, 403);
+            this.cbRol.Location = new System.Drawing.Point(558, 375);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(187, 21);
             this.cbRol.TabIndex = 123;
@@ -344,7 +333,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(519, 400);
+            this.label6.Location = new System.Drawing.Point(511, 372);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 17);
             this.label6.TabIndex = 122;
@@ -369,7 +358,6 @@
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.noDocumento);
             this.Controls.Add(this.buttonRegistrar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -382,10 +370,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Name = "registrarUsuario";
-            this.Text = "Registrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registrar Usuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.registrarUsuario_FormClosed);
             this.Load += new System.EventHandler(this.registrarUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,7 +392,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonRegistrar;
         private System.Windows.Forms.ComboBox comboBoxDocumento;
         private System.Windows.Forms.TextBox correo;

@@ -22,6 +22,7 @@ namespace ProyectoJohanChavez
 
     public partial class PanelUsuario : Form
     {
+        int doc = 0;
         int tipo=0;
         DataTable dt = new DataTable();
         public PanelUsuario()
@@ -43,10 +44,10 @@ namespace ProyectoJohanChavez
             set { dataGridView1 = value; }
         }
 
-        public TextBox textbox
+        public int textbox
         {
-            get { return textBoxDocumento; }
-            set { textBoxDocumento = value; }
+            get { return doc; }
+            set { doc = value; }
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -70,7 +71,8 @@ namespace ProyectoJohanChavez
             colum.Text = "Seleccionar";
             dataGridView1.Columns.Add(colum);
             DataTable dt2 = new DataTable();
-            dt2 = CT_Usuario.CTConsultarUsuarioPorDocumento(int.Parse(textBoxDocumento.Text));
+            dt2 = CT_Usuario.CTConsultarUsuarioPorDocumento(int.Parse(doc.ToString()));
+            textBoxDocumento.Text= dt2.Rows[0][1].ToString();
             textBoxTipoDocumento.Text = dt2.Rows[0][2].ToString();
             textBoxNombres.Text = dt2.Rows[0][3].ToString();
             textBoxApellidos.Text = dt2.Rows[0][4].ToString();
@@ -131,7 +133,7 @@ namespace ProyectoJohanChavez
         {
             CE_Usuario objUsuario = new CE_Usuario();
             objUsuario.noDocumento =int.Parse (textBoxDocumento.Text);
-            objUsuario.telefono =int.Parse(textBoxTelefono.Text);
+            objUsuario.telefono =textBoxTelefono.Text;
             objUsuario.direccion =textBoxDireccion.Text;
             objUsuario.correo =textBoxCorreo.Text;
             objUsuario.contraseña =textBoxContraseña.Text;
@@ -150,11 +152,13 @@ namespace ProyectoJohanChavez
             if (tipo == 1)
             {
                 menuAdmi form = new menuAdmi();
+                form.documento = int.Parse(doc.ToString());
                 form.Show();
             }
             else
             {
                 menu form = new menu();
+                form.documento = int.Parse(doc.ToString());
                 form.Show();
             }
             
@@ -165,8 +169,8 @@ namespace ProyectoJohanChavez
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Seleccionar")
             {
                 dataGridView1.Visible = false;
-
-                textBoxTipoDocumento.Text = dataGridView1[2,e.RowIndex].Value.ToString();
+                textBoxDocumento.Text = dataGridView1[1, e.RowIndex].Value.ToString();
+                textBoxTipoDocumento.Text = dataGridView1[2, e.RowIndex].Value.ToString();
                 textBoxNombres.Text = dataGridView1[3, e.RowIndex].Value.ToString();
                 textBoxApellidos.Text = dataGridView1[4, e.RowIndex].Value.ToString();
                 textBoxDireccion.Text = dataGridView1[5, e.RowIndex].Value.ToString();

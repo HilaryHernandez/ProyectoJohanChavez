@@ -15,9 +15,16 @@ namespace ProyectoJohanChavez
 {
     public partial class registrarUsuario : Form
     {
+        int doc = 0;
         public registrarUsuario()
         {
             InitializeComponent();
+        }
+
+        public int textbox
+        {
+            get { return doc; }
+            set { doc = value; }
         }
 
         private void buttonRegistrar_Click(object sender, EventArgs e)
@@ -32,7 +39,7 @@ namespace ProyectoJohanChavez
             usuario.apellido=apellido.Text;
             usuario.direccion=direccion.Text;
             usuario.correo=correo.Text;
-            usuario.telefono=int.Parse(telefono.Text);
+            usuario.telefono=telefono.Text;
             usuario.cargo=cargo.Text;
             usuario.nivelRiesgo = comboBoxNivelRiesgo.SelectedIndex + 1;
             usuario.contraseña=contraseña.Text;
@@ -40,6 +47,18 @@ namespace ProyectoJohanChavez
             if (CL_Controlador.CT_Usuario.CTRegistrarUsuario(usuario))
             {
                 MessageBox.Show("REGISTRO EXITOSO");
+                nombre.Text = "";
+                noDocumento.Text = "";
+                apellido.Text = "";
+                direccion.Text = "";
+                correo.Text = "";
+                telefono.Text = "";
+                noDocumento.Text = "";
+                cargo.Text = "";
+                contraseña.Text = "";
+                comboBoxDocumento.SelectedIndex = 0;
+                comboBoxNivelRiesgo.SelectedIndex = 0;
+                cbRol.SelectedIndex = 0;
             }
             else
             {
@@ -56,15 +75,7 @@ namespace ProyectoJohanChavez
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog abrir=new OpenFileDialog();
-            abrir.Filter = "Imagenes|*.jpg; *.png";
-            abrir.InitialDirectory=Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            abrir.Title = "Seleccionar imagen";
-
-            if(abrir.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = Image.FromFile(abrir.FileName);
-            }
+            
         }
 
         
@@ -76,12 +87,15 @@ namespace ProyectoJohanChavez
 
         private void registrarUsuario_Load(object sender, EventArgs e)
         {
-
+            comboBoxDocumento.SelectedIndex = 0;
+            comboBoxNivelRiesgo.SelectedIndex = 0;
+            cbRol.SelectedIndex = 0;
         }
 
         private void registrarUsuario_FormClosed(object sender, FormClosedEventArgs e)
         {
             menuAdmi menuadmi = new menuAdmi();
+            menuadmi.documento = int.Parse(doc.ToString());
             menuadmi.Show();
         }
     }

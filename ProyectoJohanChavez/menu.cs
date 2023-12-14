@@ -37,7 +37,7 @@ namespace ProyectoJohanChavez
         {
             PanelUsuario panelUsuario = new PanelUsuario();
             panelUsuario.datagrid.Visible = false;
-            panelUsuario.textbox.Text = doc.ToString();
+            panelUsuario.textbox = int.Parse(doc.ToString());
             panelUsuario.Show();
             this.Hide();
 

@@ -15,9 +15,16 @@ namespace ProyectoJohanChavez
     public partial class CalcularSueldo : Form
     {
         int tipo = 0;
+        int doc = 0;
         public CalcularSueldo()
         {
             InitializeComponent();
+        }
+
+        public int textbox
+        {
+            get { return doc; }
+            set { doc = value; }
         }
 
         public ComboBox cb
@@ -40,6 +47,8 @@ namespace ProyectoJohanChavez
         private void CalcularSueldo_Load(object sender, EventArgs e)
         {
             CTCalcularSueldo.datos();
+            cbNivelRiesgo.SelectedIndex = 0;
+            cbTipoTrabajador.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -109,16 +118,19 @@ namespace ProyectoJohanChavez
             if (tipo == 1)
             {
                 menuAdmi form = new menuAdmi();
+                form.documento = int.Parse(doc.ToString());
                 form.Show();
             }
             else if (tipo==2)
             {
                 menu form = new menu();
+                form.documento = int.Parse(doc.ToString());
                 form.Show();
             }
             else
             {
                 Form1 form = new Form1();
+                form.documento = doc.ToString();
                 form.Show();
             }
         }

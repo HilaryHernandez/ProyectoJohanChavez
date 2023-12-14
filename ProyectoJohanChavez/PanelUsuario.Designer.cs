@@ -40,7 +40,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.buttonActualizarU = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxTipoDocumento = new System.Windows.Forms.TextBox();
             this.textBoxDocumento = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
             this.textBoxNombres = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.textBoxContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBoxTipoDocumento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -193,14 +193,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // textBoxTipoDocumento
-            // 
-            this.textBoxTipoDocumento.Enabled = false;
-            this.textBoxTipoDocumento.Location = new System.Drawing.Point(218, 70);
-            this.textBoxTipoDocumento.Name = "textBoxTipoDocumento";
-            this.textBoxTipoDocumento.Size = new System.Drawing.Size(100, 22);
-            this.textBoxTipoDocumento.TabIndex = 75;
-            // 
             // textBoxDocumento
             // 
             this.textBoxDocumento.Enabled = false;
@@ -313,6 +305,14 @@
             this.label3.TabIndex = 89;
             this.label3.Text = "Telefono:";
             // 
+            // textBoxTipoDocumento
+            // 
+            this.textBoxTipoDocumento.Enabled = false;
+            this.textBoxTipoDocumento.Location = new System.Drawing.Point(218, 70);
+            this.textBoxTipoDocumento.Name = "textBoxTipoDocumento";
+            this.textBoxTipoDocumento.Size = new System.Drawing.Size(100, 22);
+            this.textBoxTipoDocumento.TabIndex = 75;
+            // 
             // PanelUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -348,7 +348,8 @@
             this.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "PanelUsuario";
-            this.Text = "PanelUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Panel Usuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PanelUsuario_FormClosed);
             this.Load += new System.EventHandler(this.PanelUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -371,7 +372,6 @@
         private System.Windows.Forms.Label label19;
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonActualizarU;
-        private System.Windows.Forms.TextBox textBoxTipoDocumento;
         private System.Windows.Forms.TextBox textBoxDocumento;
         private System.Windows.Forms.TextBox textBoxApellidos;
         private System.Windows.Forms.TextBox textBoxNombres;
@@ -385,5 +385,6 @@
         private System.Windows.Forms.ComboBox comboBoxRol;
         private System.Windows.Forms.TextBox textBoxContraseña;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxTipoDocumento;
     }
 }

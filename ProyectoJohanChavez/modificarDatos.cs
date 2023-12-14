@@ -13,9 +13,16 @@ namespace ProyectoJohanChavez
 {
     public partial class modificarDatos : Form
     {
+        int doc = 0;
         public modificarDatos()
         {
             InitializeComponent();
+        }
+
+        public int textbox
+        {
+            get { return doc; }
+            set { doc = value; }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -199,6 +206,7 @@ namespace ProyectoJohanChavez
         private void modificarDatos_FormClosed(object sender, FormClosedEventArgs e)
         {
             menuAdmi admin = new menuAdmi();
+            admin.documento = doc;
             admin.Show();
         }
     }

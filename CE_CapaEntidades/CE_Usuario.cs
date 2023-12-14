@@ -14,7 +14,7 @@ namespace CE_CapaEntidades
         public string nombre {  get; set; }
         public string apellido { get; set; }
         public string direccion {  get; set; }
-        public int telefono { get; set; }
+        public string telefono { get; set; }
         public string correo { get; set; }
         public string cargo { get; set; }   
         public int nivelRiesgo { get; set; }
